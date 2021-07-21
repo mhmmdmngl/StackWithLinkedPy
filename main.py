@@ -45,4 +45,7 @@ ll.printStack()
 ll.pop()
 ll.printStack()
 
+currentTop = ll.peek()
+print("Current Top Data is..." + str(currentTop))
+
 
