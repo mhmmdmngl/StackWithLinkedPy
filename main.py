@@ -1,6 +1,7 @@
 class LinkedStack:
     def __init__(self):
         self.top = None
+
     def push(self, data):
         node = Node(data)
         if self.top == None:
@@ -9,6 +10,7 @@ class LinkedStack:
         oldtop = self.top
         self.top = node
         self.top.next = oldtop
+
     def pop(self):
         if self.top == None:
             return
