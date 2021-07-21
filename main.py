@@ -4,16 +4,22 @@ class LinkedStack:
 
     def push(self, data):
         node = Node(data)
+        #we check if there is no data in the stack..
         if self.top == None:
             self.top = node
             return
+        #we need to store current top value
         oldtop = self.top
+        #we push our new node into top...
         self.top = node
+        #we link the new top node to old one...
         self.top.next = oldtop
 
     def pop(self):
+        #if there is no data we return.
         if self.top == None:
             return
+        #if we have just 1 item in the stack, we just assign None
         if self.top.next == None:
             self.top = None
             return
